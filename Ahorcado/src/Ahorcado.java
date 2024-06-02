@@ -11,18 +11,18 @@ public class Ahorcado {
         int intentos = 0; 
         boolean palabraAdivinada = false; 
 
-        // Arreglos: 
+        
         char[] letrasAdivinadas = new char[palabraSecreta.length()]; 
 
-        // un bucle para que lo que hace es iterar en la palabra secreta segun su tamaño indicara la cantidad de "_"
+        // EL bucle for itera la palabra para calcular cuantos "_" le mostrara al usuario 
         for(int i = 0; i < letrasAdivinadas.length; i++) {
             letrasAdivinadas[i] = '_'; 
         
         }
 
-        // Otro bucle, mintras la palabra no sea correcta seguira preguntando 
+        // Otro bucle, mientras la letra no sea correcta seguira preguntando 
         while(!palabraAdivinada && intentos < intentosMaximos) {
-            // EL Srring valueof se usa cuanod tenemos una palabra de chars 
+            // EL String valueof se usa cuanod tenemos una palabra de chars 
             System.out.println("Palabra a adivinar: " +  String.valueOf(letrasAdivinadas) + " (" + palabraSecreta.length() + " letras)"); 
             System.out.println("intriduce una letra, por favor"); 
             char letra = Character.toLowerCase(scanner.next().charAt(0)); 
